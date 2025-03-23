@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
 
-  <title>AI NEWS</title>
+  <title>AI food</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -42,9 +42,9 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="https://github.com/singhsourav0/NewsMinorProject">GitHub Repo</a></li>
-              <li><a href="https://www.bbc.com/news">News Source</a></li>
-              <li><a href="https://singhsourav0.github.io/NewsMinorProject/">News Room</a></li>
+              <li><a href="https://github.com/singhsourav0/foodMinorProject">GitHub Repo</a></li>
+              <li><a href="https://www.bbc.com/food">food Source</a></li>
+              <li><a href="https://singhsourav0.github.io/foodMinorProject/">food Room</a></li>
             </ul>
             <div class="border-button">
               <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
@@ -180,8 +180,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;" id="news-container">
-            <!-- News items will be dynamically inserted here -->
+          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;" id="food-container">
+            <!-- food items will be dynamically inserted here -->
           </div>
         </div>
       </div>
@@ -189,19 +189,19 @@
   </section>
 
   <script>
-    fetch("latest_news.json") // Ensure the JSON file is correctly linked
+    fetch("latest_food.json") // Ensure the JSON file is correctly linked
       .then(response => response.json())
       .then(data => {
-        const container = document.getElementById("news-container");
+        const container = document.getElementById("food-container");
         let html = "";
 
-        Object.keys(data).slice(0, 10).forEach(url => { // Load up to 30 news items
+        Object.keys(data).slice(0, 10).forEach(url => { // Load up to 30 food items
           const article = data[url];
 
           html += `
           <div class="item">
             <div class="thumb">
-              <img src="${article.thumbnail}" alt="News Image">
+              <img src="${article.thumbnail}" alt="food Image">
               <div class="hover-effect">
                 <div class="content">
                   <h4>
@@ -226,7 +226,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <p>Copyright <a href="#">newsroom</a>. All rights reserved. </p>
+          <p>Copyright <a href="#">foodroom</a>. All rights reserved. </p>
         </div>
       </div>
     </div>

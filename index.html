@@ -42,9 +42,9 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="https://github.com/singhsourav0/foodMinorProject">GitHub Repo</a></li>
+              <li><a href="https://github.com/ritik12122001/FoodApp">GitHub Repo</a></li>
               <li><a href="https://www.bbc.com/food">food Source</a></li>
-              <li><a href="https://singhsourav0.github.io/foodMinorProject/">food Room</a></li>
+              <li><a href="https://github.com/ritik12122001/FoodApp/">food Room</a></li>
             </ul>
             <div class="border-button">
               <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
@@ -160,6 +160,13 @@
               to unpredictable outcomes. A ‘cup of flour’ could be anywhere from 120g to 150g,
               completely changing the texture of your cake! Precision Baking solves this by
               using AI to convert any measurement into grams, ensuring perfect results every time.</p>
+            <p>Our team, Tech Titaans, has designed an innovative Android application that converts
+              recipe measurements into precise grams. Additionally, it features AI-powered tools for
+              direct user interaction through prompts. Our solution includes a comprehensive database
+              of ingredient densities, real-time conversion algorithms, and a user-friendly interface,
+              ensuring accurate and consistent results for all bakers.</p>
+            <p>Scroll down to explore the user interface of our project. To experience its full functionality,
+              download the application by clicking the button below.</p>
             <div class="buttons">
               <div class="big-border-button">
                 <a href="app-debug.apk" target="_blank"><i class="fa fa-play"></i> Get Application</a>
@@ -176,29 +183,173 @@
   <!-- ***** Main Banner Area End ***** -->
 
 
-  <section class="featured-items" id="featured-items">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype UI</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #ff9966, #ff5e62);
+        color: white;
+        text-align: center;
+      }
+
+      .container {
+        width: 100%;
+        padding: 40px;
+      }
+
+      .title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .timeline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-bottom: 40px;
+        padding: 20px 10%;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 80%;
+        height: 4px;
+        background-color: white;
+        z-index: -1;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .phase {
+        width: 20%;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .phase:hover .tooltip {
+        transform: scale(1.1);
+        background: #ffcc00;
+        color: black;
+      }
+
+      .phase .tooltip {
+        background: white;
+        color: black;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        font-size: 14px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .phase .arrow {
+        width: 20px;
+        height: 20px;
+        background: #ffcc00;
+        transform: rotate(45deg);
+        margin: 10px auto;
+      }
+
+      .images-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .images-container img {
+        width: 22%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0px 6px 10px rgba(244, 238, 238, 0.953);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .images-container img:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .timeline {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .timeline::before {
+          display: none;
+        }
+
+        .phase {
+          width: 90%;
+          margin-bottom: 20px;
+        }
+
+        .images-container img {
+          width: 45%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .images-container img {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;" id="food-container">
-            <!-- food items will be dynamically inserted here -->
-          </div>
-        </div>
+      <h2 style="font-size: 48px; font-weight: 700;"><em> UI OF THE PROTOTYPE</em></h2>
+
+      <div class="images-container">
+        <img src="assets/images/photo.jpg">
+        <img src="assets/images/photo2.jpg">
+        <img src="assets/images/photo3.jpg">
+        <img src="assets/images/photo4.jpg">
+        <img src="assets/images/photo5.jpg">
+        <img src="assets/images/photo6.jpg">
+        <img src="assets/images/photo7.jpg">
+        <img src="assets/images/photo8.jpg">
+        <img src="assets/images/photo9.jpg">
+        <img src="assets/images/photo10.jpg">
+        <img src="assets/images/photo11.jpg">
+        <img src="assets/images/photo12.jpg">
+        <img src="assets/images/photo13.jpg">
+        <img src="assets/images/photo14.jpg">
+        <img src="assets/images/photo15.jpg">
+        <img src="assets/images/photo16.jpg">
       </div>
     </div>
-  </section>
+  </body>
+</body>
 
-  <script>
-    fetch("latest_food.json") // Ensure the JSON file is correctly linked
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById("food-container");
-        let html = "";
+<script>
+  fetch("latest_food.json") // Ensure the JSON file is correctly linked
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("food-container");
+      let html = "";
 
-        Object.keys(data).slice(0, 10).forEach(url => { // Load up to 30 food items
-          const article = data[url];
+      Object.keys(data).slice(0, 10).forEach(url => { // Load up to 30 food items
+        const article = data[url];
 
-          html += `
+        html += `
           <div class="item">
             <div class="thumb">
               <img src="${article.thumbnail}" alt="food Image">
@@ -212,37 +363,37 @@
             </div>
           </div>
         `;
-        });
+      });
 
-        container.innerHTML = html;
-      })
-      .catch(error => console.error("Error fetching JSON:", error));
-  </script>
-
-
+      container.innerHTML = html;
+    })
+    .catch(error => console.error("Error fetching JSON:", error));
+</script>
 
 
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright <a href="#">foodroom</a>. All rights reserved. </p>
-        </div>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright <a href="#">foodroom</a>. All rights reserved. </p>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
 
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/popup.js"></script>
+<script src="assets/js/custom.js"></script>
 
 </body>
 
